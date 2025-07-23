@@ -13,13 +13,13 @@ a {
   margin: 0 auto;
 }
 /* Shared style */
-.section-title{
+.section-title {
   font-size: 2.8px;
   font-weight: 700;
   margin-bottom: 24px;
   color: #131313;
 }
-.section-description{
+.section-description {
   font-size: 1rem;
   color: #727272;
 }
@@ -160,12 +160,11 @@ main > section {
   margin-bottom: 16px;
 }
 /* Feature you will enjoy */
-.fact-container{
+.fact-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
 }
-.fact-card{
+.fact-card {
   border: 1px solid #ff900e;
   padding: 45px 36px 60px;
   /* width: 240px;
@@ -175,23 +174,33 @@ main > section {
   justify-content: center;
   align-items: center;
 }
-.fact-number{
+.fact-number {
   font-size: 2.8rem;
   font-weight: 600;
   color: #424242;
   margin-top: 10px;
   margin-bottom: 5px;
 }
-.fact-name{
+.fact-name {
   font-size: 1.4rem;
   font-weight: 600;
   color: #727272;
   margin-top: 10px;
 }
 
+/* Our sponser section */
+.sponser-description {
+  margin-bottom: 30px;
+  width: 540px;
+}
+.sponser-compeny {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
 
-
-
+.sponser-compeny img {
+  filter: grayscale(100%);
+}
 
 /* Responsive Meadia Quarey */
 @media screen and (max-width: 576px) {
@@ -200,10 +209,13 @@ main > section {
   .teams {
     flex-direction: column;
   }
-  .team-img-container,.fact-container {
+  .team-img-container,
+  .fact-container,
+  .sponser-compeny {
     grid-template-columns: 1fr;
   }
-  .fact-container{
+  .fact-container,
+  .sponser-compeny {
     gap: 24px;
     justify-items: center;
   }
@@ -211,16 +223,23 @@ main > section {
     margin-top: 40px;
     margin-left: 20px;
   }
+  .sponser-compeny {
+    justify-content: center;
+  }
 }
 
 /* Medium Device  */
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
-  .teams{
+  .teams {
     flex-direction: column;
   }
   .feature-container {
     margin: 50px auto;
   }
-  
+  .fact-container,
+  .sponser-compeny {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
 }
